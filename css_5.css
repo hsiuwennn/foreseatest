@@ -1,0 +1,134 @@
+*{
+	overflow-x: hidden;
+	overflow-y: hidden;
+	/*border: 1px solid #000;*/
+}
+
+#header{
+	position: fixed;
+	left: 20px;
+	top: 20px;
+}
+
+#root {
+	width: 100%;
+	height: 1000px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #FFFFFF;
+  	background-color: #0A233F;
+
+}
+
+#content {
+  width: 6000px; /*總寬度*/
+  height: 1480px; /*控制在海底多深*/
+}
+
+#all{
+	width: 6000px;
+	height: 800px;
+	position: relative;
+	bottom: -380px; /*與底邊切齊的關鍵 the height of #content - the height of #root*/
+}
+
+#bg1{
+	background-image: url(img/sea-1.svg);
+	background-repeat: repeat-x;
+	width: 6000px;
+	height: 800px; /*與底邊貼齊*/
+	z-index: -50;
+
+}
+
+#bg2{
+	background-image: url(img/sea-2.svg);
+	background-repeat: repeat-x;
+	width: 6000px;
+	height: 800px; /*與底邊貼齊*/
+	z-index: -50;
+	
+
+}
+
+
+
+.whale{
+	position: fixed;
+	left: 40px;
+	bottom: 12%;
+	z-index: 25;
+}
+
+
+.plastic{
+	position: relative;
+	left: 1600px;
+	bottom: 30%;
+	z-index: 20;
+	width: 64px;
+
+}
+
+
+.plastic2{
+	position: relative;
+	left: 1000px;
+	bottom: 30%;
+	z-index: 20;
+	transform: rotate(30deg);
+	width: 256px;
+	height: 256px;
+}
+
+
+
+.island{
+	position: relative;
+	/*left: 30%;
+	bottom: 5%;*/
+	z-index: 20;
+	width: 225px;
+	bottom: 150%;
+	left: 30%;
+	animation-name:rotation;
+	animation-timing-function:ease-in-out;
+	animation-direction:alternate;
+	animation-duration:2s;	
+	animation-iteration-count:infinite;
+
+}
+
+@keyframes rotation {
+	from {
+		
+		bottom: 160%;
+	}
+	to {
+		bottom: 162%;
+	}
+}
+
+.forsea{ 
+	position: relative;
+	top:25%;
+	left: 50%;
+	width: 500px;
+	height: 250px;
+	margin-left: -250px;
+	font-size: 180px;
+	color: #F5FF94;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+
+#select ul li{
+	display: inline;
+	float: none;
+	
+}
+
+#select{
+	position: fixed;
+	right: 5%;
+	top:0%;
+}
